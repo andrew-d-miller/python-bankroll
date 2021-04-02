@@ -3,7 +3,7 @@ Python Challenges: Py Me Up, Charlie
 
 ## PyBank
 
-![Cash-Money](Working Directory/Homework/Python/python-challenge/ PyBank/cash-money.png)
+![Cash Money](PyBank\cash-money.png)
 
 * In this challenge, you are tasked with creating a Python script for analyzing the financial records of your company. 
 
@@ -22,7 +22,7 @@ Python Challenges: Py Me Up, Charlie
 
 ## PyPoll
 
-![Polling-Station](Working Directory/Homework/Python/python-challenge/ PyPoll/polling-station.jpg)
+![Polling-Station](C:\Users\amill\Working Directory\Homework\Python\python-challenge\PyPoll\polling-station.jpg)
 
 * In this challenge, you are tasked with helping a small, rural town modernize its vote counting process.
 
