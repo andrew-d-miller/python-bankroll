@@ -22,7 +22,7 @@ Python Challenges: Py Me Up, Charlie
 
 ## PyPoll
 
-![Polling-Station](C:\Users\amill\Working Directory\Homework\Python\python-challenge\PyPoll\polling-station.jpg)
+![Polling Station](PyPoll\polling-station.jpg)
 
 * In this challenge, you are tasked with helping a small, rural town modernize its vote counting process.
 
