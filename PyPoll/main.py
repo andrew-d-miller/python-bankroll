@@ -60,8 +60,6 @@ with open(csvpath) as csvfile:
 
 
 
-
-
 # Print PyPoll Analysis
 print(f"Election Results")
 print(f"---------------------------------")
@@ -74,3 +72,17 @@ print(f"O'Tooley: {otooley_percentage:.3f}% ({otooley_votes})")
 print(f"---------------------------------")
 print(f"Winner: {winner_name}")
 print(f"---------------------------------")
+
+
+with open(output_file, "a") as txt_file:
+    txt_file.write(f"Election Results\n")
+    txt_file.write(f"---------------------------------\n")
+    txt_file.write(f"Total Votes: {total_votes}\n")
+    txt_file.write(f"---------------------------------\n")
+    txt_file.write(f"Khan: {khan_percentage:.3f}% ({khan_votes})\n")
+    txt_file.write(f"Correy: {correy_percentage:.3f}% ({correy_votes})\n")
+    txt_file.write(f"Li: {li_percentage:.3f}% ({li_votes})\n")
+    txt_file.write(f"O'Tooley: {otooley_percentage:.3f}% ({otooley_votes})\n")
+    txt_file.write(f"---------------------------------\n")
+    txt_file.write(f"Winner: {winner_name}\n")
+    txt_file.write(f"---------------------------------\n")
