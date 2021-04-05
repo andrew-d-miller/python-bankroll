@@ -13,7 +13,7 @@ otooley_votes = 0
 
 
 csvpath = os.path.join('Resources', 'election_data.csv')
-output_file = os.path.join('Resources', 'election_data_revised.txt')
+output_file = os.path.join('Analysis', 'election_data_revised.txt')
 
 
 
