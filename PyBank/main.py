@@ -14,8 +14,10 @@ date_increase = 0
 greatest_decrease = 0
 date_decrease = 0
 
-# Path to the budget data from the resources folder
+# Budget Data files to load and output as text file
 csvpath = os.path.join('Resources', 'budget_data.csv')
+output_file = os.path.join('Resources', 'budget_data_revised.txt')
+
 
 # Open the CSV file
 with open(csvpath) as csvfile:
@@ -72,18 +74,16 @@ print(f"Financial Analysis")
 print(f"------------------------------------------------------")
 print(f"Total Months: {total_months}")
 print(f"Total: ${net_total}")
-print(f"Average Change: ${avg_change}")
-print(f"Greatest Increase in Profits:, {date_increase}")
-print(f"Greatest Decrease in Profits:, {date_decrease}")
+print(f"Average Change: ${avg_change:.2f}")
+print(f"Greatest Increase in Profits: {date_increase} (${high})")
+print(f"Greatest Decrease in Profits: {date_decrease} (${low})")
 
 
-output_file = os.path.join('Resources', 'budget_data_revised.txt')
-
-with open(output_file, 'w',) as textfile:
-    textfile.write(f"Financial Analysis\n")
-    textfile.write(f"---------------------------------\n")
-    textfile.write(f"Total Months: {total_months}\n")
-    textfile.write(f"Total: {net_total}\n")
-    textfile.write(f"Average Change: ${avg_change}\n")
-    textfile.write(f"Greatest Increase in Profits:, {date_increase}\n")
-    textfile.write(f"Greatest Decrease in Profits:, {date_decrease}\n")
+with open(output_file, "a") as txt_file:
+    txt_file.write(f"Financial Analysis\n")
+    txt_file.write(f"---------------------------------\n")
+    txt_file.write(f"Total Months: {total_months}\n")
+    txt_file.write(f"Total: {net_total}\n")
+    txt_file.write(f"Average Change: ${avg_change}\n")
+    txt_file.write(f"Greatest Increase in Profits: {date_increase} (${high})\n")
+    txt_file.write(f"Greatest Decrease in Profits: {date_decrease} (${low})\n")
