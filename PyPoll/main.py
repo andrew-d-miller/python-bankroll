@@ -26,23 +26,37 @@ with open(csvpath) as csvfile:
 
     for row in csvreader:
 
-
+        # Total number of votes casted
         total_votes += 1
 
-        # Counting candidate votes
-        if (row[0] == "Khan"):
+        # Counting the total number of votes casted for each candidate
+        if (row[2] == "Khan"):
             khan_votes += 1
-        elif (row[0] == "Correy"):
+        elif (row[2] == "Correy"):
             correy_votes += 1
-        elif (row[0] == "Li"):
+        elif (row[2] == "Li"):
             li_votes += 1
         else :
             otooley_votes += 1
 
 
+        # Percentage of votes for each candidate
+        khan_percentage = (khan_votes/total_votes) * 100
+        correy_percentage = (correy_votes/total_votes) * 100
+        li_percentage = (li_votes/total_votes) * 100
+        otooley_percentage = (otooley_votes/total_votes) * 100
 
+        # Declaring the winner based on who has the most votes
+        winner = max(khan_votes, correy_votes, li_votes, otooley_votes)
 
-
+        if winner == khan_votes:
+            winner_name = "Khan"
+        elif winner == correy_votes:
+            winner_name = "Correy"
+        elif winner == li_votes:
+            winner_name = "Li"
+        else :
+            winner_name = "O'Tolley"         
 
 
 
@@ -50,13 +64,13 @@ with open(csvpath) as csvfile:
 
 # Print PyPoll Analysis
 print(f"Election Results")
-print(f"--------------------------------------")
+print(f"---------------------------------")
 print(f"Total Votes: {total_votes}")
-print(f"--------------------------------------")
-print(f"Khan: {khan_votes}")
-print(f"Correy: {correy_votes}")
-print(f"Li: {li_votes}")
-print(f"O'Tooley: {otooley_votes}")
-print(f"--------------------------------------")
-print(f"Winner: ")
-print(f"--------------------------------------")
+print(f"---------------------------------")
+print(f"Khan: {khan_percentage:.3f}% ({khan_votes})")
+print(f"Correy: {correy_percentage:.3f}% ({correy_votes})")
+print(f"Li: {li_percentage:.3f}% ({li_votes})")
+print(f"O'Tooley: {otooley_percentage:.3f}% ({otooley_votes})")
+print(f"---------------------------------")
+print(f"Winner: {winner_name}")
+print(f"---------------------------------")
