@@ -16,14 +16,13 @@ csvpath = os.path.join('Resources', 'election_data.csv')
 output_file = os.path.join('Analysis', 'election_data_revised.txt')
 
 
-
+# Read the csv file
 with open(csvpath) as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
 
-
     row = next(csvreader)
 
-
+    # Read each row of data
     for row in csvreader:
 
         # Total number of votes casted

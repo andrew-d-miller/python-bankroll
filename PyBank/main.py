@@ -37,7 +37,7 @@ with open(csvpath) as csvfile:
     date_increase = int(row[1])
     
 
-    # Read data after the header
+    # Read each row of data
     for row in csvreader:
 
         # Calculate the total number of months
