@@ -16,7 +16,7 @@ date_decrease = 0
 
 # Budget Data files to load and output as text file
 csvpath = os.path.join('Resources', 'budget_data.csv')
-output_file = os.path.join('Analysis', 'budget_data_revised.text')
+output_file = os.path.join('Resources', 'budget_data_revised.text')
 
 
 # Open the CSV file
