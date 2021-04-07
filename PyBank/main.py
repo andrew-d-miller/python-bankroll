@@ -14,9 +14,8 @@ date_increase = 0
 greatest_decrease = 0
 date_decrease = 0
 
-# Budget Data files to load and output as text file
+# Budget Data files to load 
 csvpath = os.path.join('Resources', 'budget_data.csv')
-output_file = os.path.join('Analysis', 'budget_data_revised.text')
 
 
 # Open the CSV file
@@ -78,8 +77,10 @@ print(f"Average Change: ${avg_change:.2f}")
 print(f"Greatest Increase in Profits: {date_increase} (${high})")
 print(f"Greatest Decrease in Profits: {date_decrease} (${low})")
 
+# Budget data to output as text file
+output_file = os.path.join('Analysis', 'budget_data_revised.txt')
 
-with open(output_file, "a") as txt_file:
+with open(output_file, "w") as txt_file:
     txt_file.write(f"Financial Analysis\n")
     txt_file.write(f"---------------------------------\n")
     txt_file.write(f"Total Months: {total_months}\n")

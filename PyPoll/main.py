@@ -11,9 +11,8 @@ correy_votes = 0
 li_votes = 0
 otooley_votes = 0
 
-# Election data files to load and output as text file
+# Election data files to load 
 csvpath = os.path.join('Resources', 'election_data.csv')
-output_file = os.path.join('Analysis', 'election_data_revised.text')
 
 
 # Read the csv file
@@ -73,7 +72,10 @@ print(f"Winner: {winner_name}")
 print(f"---------------------------------")
 
 
-with open(output_file, "a") as txt_file:
+# Output election data as text file
+output_file = os.path.join('Analysis', 'election_data_revised.txt')
+
+with open(output_file, "w") as txt_file:
     txt_file.write(f"Election Results\n")
     txt_file.write(f"---------------------------------\n")
     txt_file.write(f"Total Votes: {total_votes}\n")
